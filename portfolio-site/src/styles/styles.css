@@ -1,0 +1,120 @@
+/* Global Base Styles & Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+/* CSS Variables & Theme */
+:root {
+  --g: #00FF88;        /* bright green accent */
+  --g2: #00C853;       /* darker green for hovers */
+  /* dark background theme */
+  --bg: #111111;       /* dark background */
+  --bg2: #111111;
+  --bg3: #111111;
+  --card: #222222;     /* slightly lighter for cards */
+  --border: #333333;   /* subtle border */
+  --text: #FFFFFF;     /* main text white */
+  --muted: #A0A0A0;    /* secondary text gray */
+  --hf: 'Syne', sans-serif;
+  --bf: 'DM Sans', sans-serif;
+  --r: 14px;
+  --tr: 0.3s ease;
+}
+
+/* Reset & Normalize */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text); /* all regular text white to contrast with dark bg */
+  font-family: var(--bf);
+  overflow-x: hidden;
+  line-height: 1.75;
+}
+
+/* ensure every section except home picks up the dark bg if not already applied */
+section[id]:not(#home) {
+  background: var(--bg);
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  background: var(--bg2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--g);
+  border-radius: 2px;
+}
+
+/* Global Text Accent */
+span {
+  color: var(--g);
+}
+
+/* Section Utilities */
+.sec {
+  padding: 100px 8%;
+}
+
+.sec-alt {
+  background: var(--bg2);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Grid Utilities */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 22px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 920px) {
+  .sec {
+    padding: 80px 6%;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

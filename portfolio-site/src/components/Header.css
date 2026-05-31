@@ -1,0 +1,175 @@
+/* Component: Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 22px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: var(--tr);
+}
+
+.header.scrolled {
+  background: rgba(8, 8, 8, 0.94);
+  backdrop-filter: blur(20px);
+  padding: 14px 8%;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: var(--hf);
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff; /* always pure white */
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+  transition: var(--tr);
+}
+
+/* when the header adopts a dark/translucent background on scroll, keep text white */
+.header.scrolled .logo {
+  color: #fff;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-family: var(--bf);
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff; /* pure white on nav links */
+  padding: 6px 14px;
+  border-radius: 8px 8px 0 0;
+  transition: var(--tr);
+}
+
+.header.scrolled .nav-link {
+  /* links turn green when scrolled */
+  color: var(--g);
+  /* remove automatic underline so it only follows the active item */
+  border-bottom-color: transparent;
+}
+
+.header.scrolled .nav-link.active {
+  border-bottom-color: #fff;
+}
+
+.header.scrolled .nav-link:hover {
+  border-bottom-color: #fff;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--g);
+  border-bottom-color: var(--g);
+}
+
+.navbar .mobile-cta {
+  display: none;
+}
+
+.cta-btn {
+  padding: 10px 24px;
+  background: var(--g);
+  color: #000; /* ensure pure black text */
+  border: none;
+  border-radius: 8px;
+  font-family: var(--bf);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--tr);
+}
+
+.cta-btn:hover {
+  background: var(--g2);
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+  transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  padding: 4px;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+@media (max-width: 920px) {
+  .menu-overlay {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 72%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px 32px;
+    background: var(--bg2);
+    border-left: 1px solid var(--border);
+    transition: right 0.35s ease;
+    z-index: 999;
+  }
+
+  .navbar.open {
+    right: 0;
+  }
+
+  .navbar .mobile-cta {
+    display: block;
+    margin-top: 12px;
+  }
+
+  .desktop-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .header {
+    padding: 18px 6%;
+  }
+
+  .header.scrolled {
+    padding: 12px 6%;
+  }
+}

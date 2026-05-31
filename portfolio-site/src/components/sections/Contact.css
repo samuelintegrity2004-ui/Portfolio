@@ -1,0 +1,98 @@
+/* Component: Contact section */
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-family: var(--hf);
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.contact-info > p {
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.ci-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.c-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.c-form input,
+.c-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: var(--bf);
+  font-size: 15px;
+  outline: none;
+  resize: none;
+  transition: var(--tr);
+}
+
+.c-form input::placeholder,
+.c-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.c-form input:focus,
+.c-form textarea:focus {
+  border-color: var(--g);
+  box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.1);
+}
+
+.submit-btn {
+  align-self: flex-start;
+  padding: 14px 40px;
+}
+
+.f-alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.f-alert.ok {
+  background: rgba(0, 230, 118, 0.1);
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  color: var(--g);
+}
+
+.f-alert.err {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+@media (max-width: 920px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

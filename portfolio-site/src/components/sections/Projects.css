@@ -1,0 +1,98 @@
+/* Component: Projects section */
+
+.proj-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: var(--tr);
+}
+
+.proj-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--g);
+}
+
+.proj-top {
+  height: 110px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.proj-num {
+  font-family: var(--hf);
+  font-size: 40px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.proj-cat {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.proj-body {
+  padding: 20px;
+}
+
+.proj-body h3 {
+  font-family: var(--hf);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.proj-body p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.proj-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--tr);
+  display: inline-block;
+  flex: 1;
+  min-width: 110px;
+  text-align: center;
+}
+
+.btn-sm.solid {
+  background: var(--g);
+  color: #000;
+  border: 2px solid var(--g);
+}
+
+.btn-sm.solid:hover {
+  background: transparent;
+  color: var(--g);
+}
+
+.btn-sm.outline {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--border);
+}
+
+.btn-sm.outline:hover {
+  border-color: var(--g);
+  color: var(--g);
+}

@@ -1,0 +1,95 @@
+/* Component: Footer */
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 30px 8% 16px; /* reduced height for a minimal footer */
+  text-align: center;
+}
+
+/* logo and social links keep accent colors */
+.footer .logo {
+  color: var(--g);
+}
+
+.footer-socials a {
+  color: var(--g);
+  border-color: var(--g);
+}
+
+.footer-socials a:hover {
+  background: var(--g);
+  color: #000;
+}
+
+.footer-tag,
+.footer-nav button,
+.copy {
+  color: #fff;
+}
+
+.footer-nav button:hover {
+  color: var(--g);
+}
+
+.footer-tag {
+  color: var(--muted);
+  margin: 8px 0 28px;
+  font-size: 14px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--g);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: var(--tr);
+}
+
+.footer-socials a:hover {
+  background: var(--g);
+  color: #000;
+  transform: scale(1.15) translateY(-4px);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  list-style: none;
+  margin-bottom: 22px;
+}
+
+.footer-nav button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 10px;
+  transition: var(--tr);
+}
+
+.footer-nav button:hover {
+  color: var(--g);
+}
+
+.copy {
+  color: var(--muted);
+  font-size: 12px;
+}

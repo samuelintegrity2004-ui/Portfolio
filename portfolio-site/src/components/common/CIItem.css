@@ -1,0 +1,39 @@
+/* Component: CIItem (contact info item) */
+
+.ci-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ci-emoji {
+  font-size: 22px;
+  margin-top: 2px;
+}
+
+.ci-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.ci-item h4 {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.ci-item a,
+.ci-item p {
+  color: var(--text);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.ci-item a:hover {
+  color: var(--g);
+}

@@ -1,0 +1,55 @@
+/* Component: Services section */
+
+.svc-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 30px;
+  transition: var(--tr);
+}
+
+.svc-card:hover {
+  border-color: var(--g);
+  transform: translateY(-6px);
+}
+
+.svc-icon {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.svc-icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.svc-card h3 {
+  font-family: var(--hf);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.svc-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.svc-card ul {
+  list-style: none;
+}
+
+.svc-card ul li {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 3px 0;
+}
+
+.svc-card ul li::before {
+  content: '→ ';
+  color: var(--g);
+}

@@ -1,0 +1,218 @@
+
+/* Component: Home section */
+
+.home {
+  /* background image with single-color overlay using blend mode */
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../assets/porfolioimage.jpg');
+  background-size: cover;
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.6);
+  
+  min-height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 80px 2% 40px 8%; /* reduced right padding to shift visual right */
+}
+
+.home-content {
+  max-width: 560px;
+}
+
+.greeting {
+  color: var(--g);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 20px; /* space from top/navbar */
+}
+
+.home-content h1 {
+  font-family: var(--hf);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.home-p {
+  color: #fff; /* use pure white instead of muted */
+  font-size: 17px;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px; /* reduced gap to stats */
+}
+
+.btn-g {
+  padding: 14px 34px;
+  background: var(--g);
+  color: #000;
+  border: 2px solid var(--g);
+  border-radius: 10px;
+  font-family: var(--bf);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--tr);
+}
+
+.btn-g:hover {
+  background: transparent;
+  color: var(--g);
+  box-shadow: 0 0 28px rgba(0, 230, 118, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-g:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-o {
+  padding: 14px 34px;
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-family: var(--bf);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--tr);
+}
+
+.btn-o:hover {
+  border-color: var(--g);
+  color: var(--g);
+  transform: translateY(-3px);
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat h3 {
+  font-family: var(--hf);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--g); /* keep numbers green */
+}
+
+.stat p {
+  color: #fff; /* pure white for the labels */
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 40px; /* drop avatar lower to avoid touching contact section */
+}
+
+.avatar-ring {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid var(--g);
+  box-shadow: 0 0 40px rgba(0, 230, 118, 0.2), 0 0 80px rgba(0, 230, 118, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(0, 230, 118, 0.2), 0 0 80px rgba(0, 230, 118, 0.07);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(0, 230, 118, 0.4), 0 0 120px rgba(0, 230, 118, 0.15);
+  }
+}
+
+.avatar {
+  width: 272px;
+  height: 272px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #001a0a, #003320);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--hf);
+  font-size: 74px;
+  font-weight: 800;
+  color: var(--g);
+  letter-spacing: -4px;
+}
+
+.avatar-ring img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 920px) {
+  .home {
+    flex-direction: column-reverse;
+    padding: 120px 6% 60px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .home-p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-row {
+    justify-content: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .home-visual {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .avatar-ring {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .avatar {
+    width: 196px;
+    height: 196px;
+    font-size: 54px;
+  }
+
+  .avatar-ring img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-content h1 {
+    font-size: 38px;
+  }
+}

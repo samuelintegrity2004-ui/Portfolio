@@ -1,0 +1,110 @@
+/* Component: Experience section */
+
+.exp-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.tl-dot {
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--g);
+  box-shadow: 0 0 12px var(--g);
+}
+
+.tl-date {
+  font-size: 12px;
+  color: var(--g);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tl-body h3 {
+  font-family: var(--hf);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0 2px;
+}
+
+.tl-body h4 {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.tl-body p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.skills-pane h3 {
+  font-family: var(--hf);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.skill-pct {
+  color: var(--g);
+  font-weight: 600;
+}
+
+.skill-track {
+  height: 6px;
+  background: var(--bg3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--g), var(--g2));
+  border-radius: 3px;
+  transition: width 1.2s ease;
+}
+
+@media (max-width: 920px) {
+  .exp-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
