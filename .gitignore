@@ -1,7 +1,10 @@
-# Environment Variables
+# ⚠️ SECRETS & CREDENTIALS (CRITICAL)
 .env
 .env.local
 .env.*.local
+.env.*.js
+secrets/
+config/secrets*
 
 # Dependencies
 node_modules/
@@ -13,7 +16,7 @@ node_modules/
 /build
 *.tsbuildinfo
 
-# IDE
+# IDE & Editor
 .vscode/
 .idea/
 *.swp
@@ -26,6 +29,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+*.log
 
 # OS
 Thumbs.db
@@ -35,5 +39,12 @@ Thumbs.db
 coverage/
 .nyc_output/
 
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
 # Misc
 .cache/
+.env.backup
+.env.old
