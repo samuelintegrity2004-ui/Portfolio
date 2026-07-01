@@ -1,11 +1,12 @@
 /* Component: Services section */
 
 .svc-card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: #17231c;
+  border: 1px solid rgba(0,255,136,0.16);
   border-radius: var(--r);
   padding: 30px;
   transition: var(--tr);
+  min-width: 0;
 }
 
 .svc-card:hover {
@@ -52,4 +53,10 @@
 .svc-card ul li::before {
   content: '→ ';
   color: var(--g);
+}
+
+@media (max-width: 760px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
 }

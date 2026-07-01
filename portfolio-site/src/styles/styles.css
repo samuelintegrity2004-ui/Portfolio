@@ -115,6 +115,7 @@ span {
 @media (max-width: 520px) {
   .grid-3,
   .grid-2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

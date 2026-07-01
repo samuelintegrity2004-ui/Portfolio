@@ -23,7 +23,7 @@ export function Contact({ form, setForm, handleChange, handleSubmit, formStatus 
             <CIItem
               emoji="/Phonecall.png"
               label="Phone"
-              value="09151277509"
+              value="+234 915 127 7509"
               href="tel:+2349151277509"
             />
             <CIItem emoji="/Location.png" label="Location" value="Enugu, Nigeria" />
@@ -48,23 +48,7 @@ export function Contact({ form, setForm, handleChange, handleSubmit, formStatus 
               required
             />
           </div>
-          <div className="form-row">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={form.phone}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={form.subject}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <div className="form-row" />
           <textarea
             name="message"
             placeholder="Your Message"

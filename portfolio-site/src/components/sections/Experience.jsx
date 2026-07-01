@@ -1,5 +1,5 @@
 import './Experience.css';
-import { EXPERIENCES, SKILLS } from '../../constants/data';
+import { EXPERIENCES, SKILLS, TECH_ICONS } from '../../constants/data';
 import { SecHead } from '../common/SecHead';
 
 export function Experience({ barsReady }) {
@@ -27,20 +27,16 @@ export function Experience({ barsReady }) {
         </div>
         <div className="skills-pane">
           <h3>Technical Skills</h3>
-          {SKILLS.map((sk, i) => (
-            <div className="skill" key={i}>
-              <div className="skill-label">
-                <span>{sk.name}</span>
-                <span className="skill-pct">✓</span>
+          <div className="skills-grid">
+            {TECH_ICONS.map((t, i) => (
+              <div className="skill-card" key={i}>
+                <div className="skill-card-inner">
+                  <img src={t.img} alt={t.label} />
+                </div>
+                <div className="skill-card-label">{t.label}</div>
               </div>
-              <div className="skill-track">
-                <div
-                  className="skill-fill"
-                  style={{ width: barsReady ? `${sk.level}%` : "0%" }}
-                />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

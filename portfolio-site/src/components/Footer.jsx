@@ -9,7 +9,6 @@ export function Footer({ goTo }) {
       </button>
       <p className="footer-tag">Frontend Developer · Nigeria 🇳🇬</p>
       <div className="footer-socials">
-        <a href={SOCIAL.facebook} target="_blank" rel="noreferrer" title="Facebook">f</a>
         <a href={SOCIAL.twitter} target="_blank" rel="noreferrer" title="Twitter/X">𝕏</a>
         <a href={SOCIAL.linkedin} target="_blank" rel="noreferrer" title="LinkedIn">in</a>
         <a href={SOCIAL.whatsapp} target="_blank" rel="noreferrer" title="WhatsApp">wa</a>

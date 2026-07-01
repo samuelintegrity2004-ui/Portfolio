@@ -40,9 +40,11 @@ app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, phone, subject, message } = req.body;
 
-    if (!name || !email || !subject || !message) {
-      return res.status(400).json({ error: 'Name, email, subject and message are required.' });
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: 'Name, email and message are required.' });
     }
+
+    const finalSubject = subject || 'Portfolio message';
 
     let emailSent = false;
     if (resend && NOTIFY_EMAIL && FROM_EMAIL) {
@@ -50,12 +52,12 @@ app.post('/api/contact', async (req, res) => {
         from: FROM_EMAIL,
         to: NOTIFY_EMAIL,
         replyTo: email,
-        subject: `Portfolio message: ${subject}`,
+        subject: `Portfolio message: ${finalSubject}`,
         html:
           `<strong>Name:</strong> ${name}<br>` +
           `<strong>Email:</strong> <a href="mailto:${email}">${email}</a><br>` +
           `<strong>Phone:</strong> ${phone || 'N/A'}<br>` +
-          `<strong>Subject:</strong> ${subject}<br><br>` +
+          `<strong>Subject:</strong> ${finalSubject}<br><br>` +
           `<p>${message.replace(/\n/g, '<br>')}</p>`,
       });
       if (error) {

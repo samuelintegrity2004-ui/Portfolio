@@ -1,6 +1,5 @@
 /* ══ UPDATE YOUR SOCIAL HANDLES HERE ══ */
 export const SOCIAL = {
-  facebook:  "https://facebook.com/YOUR_HANDLE",
   twitter:   "https://twitter.com/IfeanyiSam39950",
   linkedin:  "https://linkedin.com/in/ifeanyi-samuel-436a31276",
   whatsapp:  "https://wa.me/2348108882001",
@@ -29,7 +28,7 @@ export const SERVICES = [
 export const EXPERIENCES = [
   { role: "Frontend Developer",   company: "",  period: "2021 – 2022", desc: "Crafting responsive, modern, and user-friendly web interfaces using React, JavaScript, and contemporary frontend technologies to deliver smooth digital experiences.", skills: ["React"] },
   { role: "Backend Developer", company: "", period: "2022 – 2023",    desc: "Building secure, scalable, and efficient server-side applications with Node.js, Express, and database integration to power reliable web solutions.", skills: ["HTML5","CSS3","JavaScript"] },
-  { role: "Full Stack Developer",  company: "",       period: "2026 – Present",    desc: "Combining frontend creativity with backend logic to design and develop complete web applications from concept to deployment, ensuring performance and scalability.", skills: ["HTML","CSS","React"] },
+  { role: "Full Stack Developer",  company: "",       period: "2024 – Present",    desc: "Combining frontend creativity with backend logic to design and develop complete web applications from concept to deployment, ensuring performance and scalability.", skills: ["HTML","CSS","React"] },
 ];
 
 /* ═══════════ SKILLS ═══════════ */
@@ -43,12 +42,55 @@ export const SKILLS = [
   { name: "Git & GitHub", level: 100 },
 ];
 
+/* Visual skill cards used in the Experience section (images live in public/) */
+export const TECH_ICONS = [
+  { label: 'HTML', img: '/html.png' },
+  { label: 'CSS', img: '/css.png' },
+  { label: 'JavaScript', img: '/javascript.png' },
+  { label: 'React', img: '/react.png' },
+  { label: 'Tailwind', img: '/tailwind.png' },
+  { label: 'Node.js', img: '/nodejs.png' },
+  { label: 'Express', img: '/express.png' },
+  { label: 'MongoDB', img: '/mongodb.png' },
+  { label: 'Git', img: '/git.png' },
+  { label: 'GitHub', img: '/github.png' },
+];
+
 /* ═══════════ PROJECTS ═══════════ */
 export const PROJECTS = [
-  { title: "ShopEase",     category: "Full Stack", desc: "Complete e-commerce solution with product management, shopping cart, Paystack payments integration, and full order tracking dashboard.", tech: ["React","Node.js","MongoDB","Paystack"],   gradient: "linear-gradient(135deg,#00e676,#00897b)", live: "#", github: SOCIAL.github },
-  { title: "DataViz",      category: "Frontend",   desc: "Real-time analytics dashboard monitoring business KPIs, user behaviour, and sales metrics with fully interactive Chart.js visualisations.", tech: ["React","Chart.js","Tailwind CSS"],        gradient: "linear-gradient(135deg,#69f0ae,#00c853)", live: "#", github: SOCIAL.github },
-  { title: "ChatterBox",   category: "Full Stack", desc: "Real-time messaging application featuring group rooms, private chats, media sharing, and live online-presence indicators.", tech: ["React","Socket.io","Express","MongoDB"],   gradient: "linear-gradient(135deg,#b9f6ca,#1b5e20)", live: "#", github: SOCIAL.github },
-  { title: "NaijaWeather", category: "Web App",    desc: "Nigeria-focused weather application with real-time data from OpenWeatherAPI, 7-day forecasts, and automatic GPS location detection.", tech: ["React","OpenWeatherAPI","Geolocation"],  gradient: "linear-gradient(135deg,#ccff90,#33691e)", live: "#", github: SOCIAL.github },
+  {
+    title: "Electronics & Fashion Store",
+    category: "E-commerce",
+    desc: "A modern e-commerce platform for shopping electronics and fashion products. Features include product browsing, category filtering, shopping cart, user authentication, and a responsive design for a seamless shopping experience.",
+    tech: ["React","E-commerce","Responsive UI","Authentication"],
+    image: "/electronics-and-fashion.jpg",
+    live: "https://ecommerce-site-six-psi.vercel.app",
+    github: "https://github.com/samuelintegrity2004-ui/Ecommerce-site",
+  },
+  {
+    title: "Skincare & Body Care Store",
+    category: "E-commerce",
+    desc: "An online store built for skincare and body care products. Designed with a clean interface, responsive layout, and essential e-commerce features to deliver a smooth and enjoyable shopping experience.",
+    tech: ["React","Storefront","Responsive UI","Product Catalog"],
+    image: "/cream-and-body-care.jpg",
+    status: "Project still in progress",
+  },
+  {
+    title: "School Website",
+    category: "Website",
+    desc: "A responsive school website that provides information about admissions, academic programs, events, and campus activities. Built with a focus on accessibility, usability, and modern design.",
+    tech: ["React","Accessibility","Responsive UI","Content Design"],
+    image: "/school-site.jpg",
+    status: "Project still in progress",
+  },
+  {
+    title: "General Products Store",
+    category: "E-commerce",
+    desc: "A responsive e-commerce website for a wide range of products. Includes product listings, shopping cart functionality, and an intuitive interface for easy online shopping.",
+    tech: ["React","E-commerce","Shopping Cart","Responsive UI"],
+    image: "/overall-product.jpg",
+    status: "Project still in progress",
+  },
 ];
 
 /* ═══════════ EDUCATION ═══════════ */

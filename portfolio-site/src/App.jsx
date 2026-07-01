@@ -17,7 +17,7 @@ export default function App() {
   const [menuOpen,   setMenuOpen]   = useState(false);
   const [scrolled,   setScrolled]   = useState(false);
   const [barsReady,  setBarsReady]  = useState(false);
-  const [form,       setForm]       = useState({ name:"", email:"", phone:"", subject:"", message:"" });
+  const [form,       setForm]       = useState({ name:"", email:"", message:"" });
   const [formStatus, setFormStatus] = useState("");
   const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
@@ -73,13 +73,14 @@ export default function App() {
     e.preventDefault();
     setFormStatus("sending");
     try {
+      const payload = { name: form.name, email: form.email, message: form.message };
       const res = await fetch(`${API_BASE}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       setFormStatus(res.ok ? "success" : "error");
-      if (res.ok) setForm({ name:"", email:"", phone:"", subject:"", message:"" });
+      if (res.ok) setForm({ name:"", email:"", message:"" });
     } catch {
       setFormStatus("error");
     }
