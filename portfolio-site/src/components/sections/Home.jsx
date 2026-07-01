@@ -2,6 +2,10 @@ import './Home.css';
 import ifeco from '../../assets/ifecos2.jpg'
 
 export function Home({ goTo }) {
+  const openCv = () => {
+    window.open('/Ifeanyi_Samuel_CV.pdf', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="home" className="home reveal">
       <div className="home-content">
@@ -12,7 +16,7 @@ export function Home({ goTo }) {
           Passionate about turning ideas into pixel-perfect digital realities.
         </p>
         <div className="btn-row">
-          <button className="btn-g" onClick={() => goTo("contact")}>Hire Me</button>
+          <button className="btn-g" onClick={openCv}>Hire Me</button>
           <button className="btn-o" onClick={() => goTo("experience")}>Experience</button>
         </div>
         <div className="stats">
