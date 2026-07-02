@@ -12,7 +12,7 @@ export function Home({ goTo }) {
         <p className="greeting">Hi there!</p>
         <h1>I'm <span>Ifeanyi</span><br />a Fullstack<br />Developer</h1>
         <p className="home-p">
-          I craft beautiful, responsive web experiences with clean code and modern design.
+          I craft beautiful, responsive websites and web applications with clean code and modern design.
           Passionate about turning ideas into pixel-perfect digital realities.
         </p>
         <div className="btn-row">
