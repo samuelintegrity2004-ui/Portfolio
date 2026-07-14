@@ -32,6 +32,10 @@
   transition: var(--tr);
 }
 
+.logo span {
+  color: #bac964;
+}
+
 /* when the header adopts a dark/translucent background on scroll, keep text white */
 .header.scrolled .logo {
   color: #fff;
@@ -62,8 +66,8 @@
 }
 
 .header.scrolled .nav-link {
-  /* links turn green when scrolled */
-  color: var(--g);
+  /* links turn accent when scrolled */
+  color: #bac964;
   /* remove automatic underline so it only follows the active item */
   border-bottom-color: transparent;
 }
@@ -78,8 +82,8 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--g);
-  border-bottom-color: var(--g);
+  color: #bac964;
+  border-bottom-color: #bac964;
 }
 
 .navbar .mobile-cta {
@@ -88,7 +92,7 @@
 
 .cta-btn {
   padding: 10px 24px;
-  background: var(--g);
+  background: #bac964;
   color: #000; /* ensure pure black text */
   border: none;
   border-radius: 8px;
@@ -100,8 +104,8 @@
 }
 
 .cta-btn:hover {
-  background: var(--g2);
-  box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+  background: #9ea24f;
+  box-shadow: 0 0 20px rgba(186, 201, 100, 0.4);
   transform: translateY(-2px);
 }
 

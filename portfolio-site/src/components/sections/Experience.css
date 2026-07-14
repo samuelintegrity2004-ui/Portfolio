@@ -54,13 +54,13 @@
 }
 
 .tl-body h4 {
-  color: var(--muted);
+  color: var(--muted-weak);
   font-size: 14px;
   margin-bottom: 8px;
 }
 
 .tl-body p {
-  color: var(--muted);
+  color: var(--muted-weak);
   font-size: 14px;
   margin-bottom: 12px;
 }

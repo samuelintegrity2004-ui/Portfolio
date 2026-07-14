@@ -1,8 +1,8 @@
 /* Component: Services section */
 
 .svc-card {
-  background: #17231c;
-  border: 1px solid rgba(0,255,136,0.16);
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: var(--r);
   padding: 30px;
   transition: var(--tr);
@@ -32,6 +32,7 @@
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: var(--text);
 }
 
 .svc-card p {

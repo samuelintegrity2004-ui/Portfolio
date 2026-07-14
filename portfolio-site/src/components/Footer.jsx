@@ -5,7 +5,7 @@ export function Footer({ goTo }) {
   return (
     <footer className="footer">
       <button className="logo" onClick={() => goTo("home")}>
-        <span>Ifea</span>nyi
+        <span>Ifea</span><span className="logo-white">nyi</span>
       </button>
       <p className="footer-tag">Frontend Developer · Nigeria 🇳🇬</p>
       <div className="footer-socials">

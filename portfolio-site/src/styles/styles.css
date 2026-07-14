@@ -4,20 +4,22 @@
 
 /* CSS Variables & Theme */
 :root {
-  --g: #00FF88;        /* bright green accent */
-  --g2: #00C853;       /* darker green for hovers */
-  /* dark background theme */
-  --bg: #111111;       /* dark background */
-  --bg2: #111111;
-  --bg3: #111111;
-  --card: #222222;     /* slightly lighter for cards */
-  --border: #333333;   /* subtle border */
-  --text: #FFFFFF;     /* main text white */
-  --muted: #A0A0A0;    /* secondary text gray */
+  --g: #BAC964;                       /* primary accent */
+  --g2: #A7B941;                      /* hover accent */
+  --bg: #1f1f1f;                      /* main background */
+  --bg2: #222222;                     /* section background */
+  --bg3: #222222;
+  --card: #2d2d2d;                    /* card background */
+  --card-alt: #333333;                /* alternate card */
+  --border: #444444;                  /* borders */
+  --text: #FFFFFF;                    /* heading text */
+  --muted: rgba(255,255,255,0.75);    /* body text */
+  --muted-weak: rgba(255,255,255,0.55);/* secondary text */
   --hf: 'Syne', sans-serif;
   --bf: 'DM Sans', sans-serif;
   --r: 14px;
   --tr: 0.3s ease;
+  --footer-bg: #151515;               /* darker footer background */
 }
 
 /* Reset & Normalize */
@@ -29,21 +31,21 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--bg);
-  color: var(--text); /* all regular text white to contrast with dark bg */
+  color: var(--text);
   font-family: var(--bf);
   overflow-x: hidden;
   line-height: 1.75;
 }
 
-/* ensure every section except home picks up the dark bg if not already applied */
+/* ensure every section except home picks up the requested non-hero background */
 section[id]:not(#home) {
-  background: var(--bg);
+  background: var(--bg2);
+}
+/* ensure every section except home picks up the new background theme */
+section[id]:not(#home) {
+  background: var(--bg2);
 }
 
 
@@ -68,7 +70,7 @@ span {
 }
 
 .sec-alt {
-  background: var(--bg2);
+  background: rgba(34, 34, 34, 0.98);
 }
 
 /* Scroll reveal */
