@@ -20,7 +20,7 @@ export function Home({ goTo }) {
           <button className="btn-o" onClick={() => goTo("experience")}>Experience</button>
         </div>
         <div className="stats">
-          <div className="stat"><h3>2+</h3><p>Years Exp.</p></div>
+          <div className="stat"><h3>3+</h3><p>Years Exp.</p></div>
           <div className="stat"><h3>5+</h3><p>Projects</p></div>
           <div className="stat"><h3>5+</h3><p>Clients</p></div>
         </div>
