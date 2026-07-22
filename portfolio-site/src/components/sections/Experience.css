@@ -50,6 +50,7 @@
   font-family: var(--hf);
   font-size: 18px;
   font-weight: 700;
+  color: var(--g);
   margin: 6px 0 2px;
 }
 

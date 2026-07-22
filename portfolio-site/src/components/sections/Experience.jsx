@@ -1,5 +1,5 @@
 import './Experience.css';
-import { EXPERIENCES, SKILLS, TECH_ICONS } from '../../constants/data';
+import { EXPERIENCES, TECH_ICONS } from '../../constants/data';
 import { SecHead } from '../common/SecHead';
 
 export function Experience({ barsReady }) {
@@ -12,15 +12,9 @@ export function Experience({ barsReady }) {
             <div className="tl-item" key={i}>
               <div className="tl-dot" />
               <div className="tl-body">
-                <span className="tl-date">{ex.period}</span>
                 <h3>{ex.role}</h3>
                 {ex.company && <h4>{ex.company}</h4>}
                 <p>{ex.desc}</p>
-                <div className="badge-row">
-                  {ex.skills.map(s => (
-                    <span key={s} className="badge">{s}</span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}

@@ -15,7 +15,6 @@ export function Projects() {
             <div className="proj-body">
               <h3>{p.title}</h3>
               <p className="proj-desc">{p.desc}</p>
-              <p className="proj-tech">{p.tech.join(" + ")}</p>
               {p.status ? (
                 <div className="project-status">{p.status}</div>
               ) : (
